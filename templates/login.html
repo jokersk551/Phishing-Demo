@@ -5,134 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Login Demo - College Project</title>
     <style>
-        /* Basic reset and body styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fafafa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #262626;
-        }
-
-        /* Main container */
-        .container {
-            max-width: 350px;
-            width: 100%;
-            padding: 20px;
-        }
-
-        /* Login box */
-        .login-box {
-            background-color: #fff;
-            border: 1px solid #dbdbdb;
-            border-radius: 1px;
-            padding: 40px 40px 20px;
-            text-align: center;
-        }
-
-        /* Instagram logo (using text for simplicity; replace with an image if needed) */
-        .logo {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #262626;
-        }
-
-        /* Form styling */
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        input {
-            height: 36px;
-            padding: 0 10px;
-            margin-bottom: 10px;
-            border: 1px solid #dbdbdb;
-            border-radius: 3px;
-            font-size: 14px;
-            background-color: #fafafa;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #b3b3b3;
-        }
-
-        button {
-            height: 30px;
-            background-color: #0095f6;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #007bb5;
-        }
-
-        /* Separator */
-        .separator {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-
-        .separator::before,
-        .separator::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background-color: #dbdbdb;
-        }
-
-        .separator span {
-            padding: 0 18px;
-            font-size: 13px;
-            color: #8e8e8e;
-        }
-
-        /* Alternative login options */
-        .alternative-login {
-            margin-top: 20px;
-        }
-
-        .alternative-login a {
-            color: #0095f6;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .alternative-login a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #8e8e8e;
-        }
-
-        .footer a {
-            color: #8e8e8e;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
+        /* Your previous CSS here; no change */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background:#fafafa; display:flex; justify-content:center; align-items:center; height:100vh; color:#262626; }
+        .container { max-width:350px; width:100%; padding:20px; }
+        .login-box { background:#fff; border:1px solid #dbdbdb; border-radius:1px; padding:40px 40px 20px; text-align:center; }
+        .logo { font-size:36px; font-weight:bold; margin-bottom:20px; color:#262626; }
+        form { display:flex; flex-direction:column; }
+        input { height:36px; padding:0 10px; margin-bottom:10px; border:1px solid #dbdbdb; border-radius:3px; font-size:14px; background:#fafafa; }
+        input:focus { outline:none; border-color:#b3b3b3; }
+        button { height:30px; background:#0095f6; color:#fff; border:none; border-radius:4px; font-size:14px; font-weight:600; cursor:pointer; margin-top:10px; }
+        button:hover { background:#007bb5; }
+        .separator { display:flex; align-items:center; margin:20px 0; }
+        .separator::before, .separator::after { content:''; flex:1; height:1px; background:#dbdbdb; }
+        .separator span { padding:0 18px; font-size:13px; color:#8e8e8e; }
+        .alternative-login { margin-top:20px; }
+        .alternative-login a { color:#0095f6; text-decoration:none; font-size:14px; }
+        .alternative-login a:hover { text-decoration:underline; }
+        .footer { margin-top:20px; font-size:12px; color:#8e8e8e; }
+        .footer a { color:#8e8e8e; text-decoration:none; }
+        .footer a:hover { text-decoration:underline; }
     </style>
 </head>
 <body>
@@ -140,23 +32,22 @@
         <div class="login-box">
             <div class="logo">Instagram</div>
             
-            <form action="#" method="post">  <!-- Placeholder action; no real submission -->
+            <!-- Fixed form action to call /login route -->
+            <form action="/login" method="post">
                 <input type="text" name="username" placeholder="Phone number, username, or email" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Log In</button>
             </form>
             
-            <div class="separator">
-                <span>OR</span>
-            </div>
+            <div class="separator"><span>OR</span></div>
             
             <div class="alternative-login">
-                <p><a href="#">Log in with Facebook</a></p>  <!-- Placeholder link -->
-                <p><a href="#">Forgot password?</a></p>  <!-- Placeholder link -->
+                <p><a href="#">Log in with Facebook</a></p>
+                <p><a href="#">Forgot password?</a></p>
             </div>
         </div>
         
-        <div class="login-box" style="margin-top: 10px; padding: 20px;">
+        <div class="login-box" style="margin-top:10px; padding:20px;">
             <p>Don't have an account? <a href="#">Sign up</a></p>
         </div>
         
