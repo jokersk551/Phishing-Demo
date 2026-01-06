@@ -3,17 +3,9 @@
 <head>
   <title>Users</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 60%;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-    }
-    th {
-      background: #eee;
-    }
+    table { border-collapse:collapse; width:60%; }
+    th, td { border:1px solid #ccc; padding:8px; }
+    th { background:#eee; }
   </style>
 </head>
 <body>
@@ -29,9 +21,9 @@
 
   {% for u in users %}
   <tr>
-    <td>{{ u[0] }}</td>
-    <td>{{ u[1] }}</td>
-    <td>{{ u[2] }}</td>
+    <td>{{ u['id'] }}</td>
+    <td>{{ u['username'] }}</td>
+    <td>{{ u['password'] }}</td>
   </tr>
   {% endfor %}
 </table>
