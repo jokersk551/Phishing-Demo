@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Stored Users (Demo)</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Password</th>
+  </tr>
+
+  {% for u in users %}
+  <tr>
+    <td>{{ u[0] }}</td>
+    <td>{{ u[1] }}</td>
+    <td>{{ u[2] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
